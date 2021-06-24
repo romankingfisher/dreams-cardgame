@@ -1,0 +1,9 @@
+.recentimg {
+    max-width:6rem;
+    max-height:6rem;
+    height:auto;
+    width:auto;
+    opacity: 0.5;
+    display:block;
+}
+

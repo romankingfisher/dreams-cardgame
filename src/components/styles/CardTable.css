@@ -1,0 +1,142 @@
+
+.cardtable {
+    display:grid;
+}
+
+
+
+
+.shuffleButton {
+    /* add styles for mobile screen */
+}
+
+.playerHand {
+    display:grid;
+    /* repeat the 5 cols */
+    grid-template-columns: repeat(5,1fr);
+    position: absolute;
+    top: 55%;
+    grid-gap:10px;
+}
+
+.score {
+    color:white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    top:-35px;
+    
+    /* when content overflows, the circle doesn't work
+     need overflow:hidden to display the circle */
+    overflow:hidden;
+
+}
+
+
+
+.cards {
+    border: 3px solid black; 
+    overflow: hidden;
+    min-width: 75px;
+    /* width: 200px;
+    height: 200px;
+    border-radius: 50%; */
+    
+}
+
+.cards img {
+    width:100%;
+    
+    transform: scale(1.25);
+    
+}
+
+
+@media screen and (min-width:790px) {
+
+
+.cardtable {
+    
+    text-align: center;
+    margin:5px;
+    color:blue;
+}
+
+.shuffleButton {
+    width: 20%;
+    position:relative;
+    left:50px;
+}
+
+
+
+
+.cards {
+    border: 3px solid black;
+    display: inline;
+    width: 225px;
+    height: 400px;
+}
+
+.cards img {
+    width:95%;
+    height:auto;
+}
+
+}
+/* end style for bigger screen */
+
+
+
+
+/* TODP: add sass; add variable to reuse between each of these eleemnts */
+.cartoon {
+    background-color:darkturquoise;
+    
+}
+
+.bikini {
+  
+    background-color: chartreuse;
+    
+    
+}
+
+.lingerie {
+    /* height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10; */
+    background-color:crimson;
+}
+
+.spank{
+    /* height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10; */
+    background-color: chocolate;
+}
+
+ .glamour{
+    /*    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10; */
+    background-color: burlywood;
+}
+
+.wildcard {
+    /* height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10; */
+    background-color:blueviolet;
+}
