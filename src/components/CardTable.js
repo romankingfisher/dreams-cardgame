@@ -13,7 +13,26 @@ const CardTable = () => {
     const [randomNums, setRandomNums] = useState([])
     
 
-    
+    const cardSelected = (event) => {
+/* handleClick = event => event.target.classList.add('click-state');
+
+render() {
+    return <div className="base-state" onClick={this.handleClick}>Click here</div>;
+  }
+*/
+        const eventCheck = event.target.classList
+
+        eventCheck.contains('cardSelected') ? 
+        eventCheck.remove('cardSelected') : eventCheck.add('cardSelected')
+
+        
+        // console.log(event.target) --> shows the image path and alt
+        // setSelectedCard(!selectedCard)
+
+        // will select ALL of the cards
+        // this.setState({selectedCard: !this.state.selectedCard})
+        
+    }    
 
     const shuffleCards = () => {
         // reseting player hand to start a new game
@@ -57,11 +76,11 @@ const CardTable = () => {
 
     let playerHand = randomNums.map((n) => {
         return (
-            <div className="cards">
-            <div  key={getRandomKey()}>
-                <div className="score">
-                
-                    <h1 className= {n.style === "wildcard" ? " " : n.style}> {n.style === "wildcard" ? "" : n.score}</h1>
+            <div className="cards" onClick={cardSelected}>
+                {/* className= {selectedCard ? 'cardSelected' : null }  */}
+            <div  key={getRandomKey()} >
+                <div className="score">   
+                    <h1 className= {  n.style === "wildcard" ? " " : n.style}> {n.style === "wildcard" ? "" : n.score}</h1>
                 </div>
                 
                 <img src= {'images/' + n.style + "/" + n.path}  alt= {n.path} />
@@ -74,10 +93,12 @@ const CardTable = () => {
         return (
             <div className="cardtable">
                 <h1>Dreams</h1>
+                <table>
                 <caption>
                     run: <em>Earn 1.5x Ex:</em> 4,5,6<br/>
                     three of a kind: <em>Earn double</em> Ex: 5,5,5
                 </caption>
+                </table>
                 <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
                 {/* only display if user has submitted three cards */}
                 <button className="ui basic button playCards" >Play Cards</button>   
