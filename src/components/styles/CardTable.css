@@ -65,7 +65,7 @@
     color:blue;
 }
 
-.shuffleButton {
+.shuffleButton, .playCards {
     width: 20%;
     position:relative;
     left:50px;

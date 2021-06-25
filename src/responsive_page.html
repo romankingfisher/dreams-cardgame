@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Responsive Page</title>
+
+<style>
+
+	.ai_grid {
+		display: grid;
+		grid-template-columns: repeat(5,1fr);
+		grid-gap: 0.1px;
+		width: 450px;
+	}
+
+	.ai_card {
+		background-color: tan;
+		height: 150px;
+		width: 75px;
+		border: 2px solid black;
+
+	}
+
+	.t {
+		transform: rotate(15deg);
+	}
+
+	.u {
+		transform: rotate(7deg);
+	}
+
+	.w {
+		transform: rotate(-7deg);
+	}
+
+	.x {
+		transform: rotate(-15deg);
+	}
+
+	
+	.grid {
+		width: 100%;
+		position: absolute;
+		top: 55%;
+		left: 2.5%;
+		display: grid;
+		grid-template-columns: repeat(5,1fr);
+		
+		/*margin-left: 2.5%;*/
+		grid-gap: 5px;
+	}
+
+	.card {
+		border: 1px solid black;
+		height: 7rem;
+		width: 75%;
+	}
+
+	.a {
+		background-color: blue;
+
+	}
+
+
+
+	.b {
+		background-color: yellow;
+	}
+	.c {
+		background-color: green;
+	}
+	.d {
+		background-color: purple;
+	}
+	.e {
+		background-color: orange;
+	}
+
+/*WATCH WHERE THE CODE IS PLACED!! CASCADING!!!*/
+	.selected {
+		background-color: red;
+		color:blue;
+		/*font-size: 205px;*/
+	}
+
+	@media screen and (min-width: 768px) {
+		
+
+		.grid {
+			/*margin: 0px auto;*/
+			/*width:1200px;*/
+			/*justify-content: center;*/
+		}
+
+		.card {
+			height:250px;
+			width: 150px;
+		}
+	}
+
+</style>
+</head>
+<body>
+
+<div class="ai_grid">
+	<div class="ai_card t">t</div>
+	<div class="ai_card u">u</div>
+	<div class="ai_card v">v</div>
+	<div class="ai_card w">w</div>
+	<div class="ai_card x">x</div>
+</div>	
+
+<div class="grid">
+	<div class="a card" onclick="selected(this)">A</div>
+	<div class="b card" onclick="selected(this)">B</div>
+	<div class="c card" onclick="selected(this)">C</div>
+	<div class="d card" onclick="selected(this)">D</div>
+	<div class="e card" onclick="selected(this)">E</div>
+</div>
+	
+	<!-- best way to grab an element in react? -->
+	<button>Play Cards</button>
+
+	<script>
+		let allSelected = [];
+
+
+		//remove el
+		function remove(el) {
+			let i = allSelected.indexOf(el)
+			allSelected.splice(i,1);
+		}
+
+		function selected(el) {
+
+			let flag = allSelected.length === 3 ? false : true;
+			
+			 if (allSelected.includes(el) && allSelected.length === 3) {
+				el.classList.toggle("selected");
+				remove(el);
+				flag = false;
+			}
+
+			if (allSelected.length < 3 && flag) {
+				el.classList.toggle("selected")
+				allSelected.includes(el) ? remove(el) : allSelected.push(el);
+				
+			}
+			
+
+
+		}
+	</script>
+</body>
+</html>
