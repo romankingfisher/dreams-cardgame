@@ -12,18 +12,123 @@ const CardTable = () => {
 
     const [randomNums, setRandomNums] = useState([])
     
+    // let [numCardsSelected, setNumCardsSelected] = useState(0)
+
+    let [allSelected, setAllSelected] = useState([])
+
+    const playCards = (event) => {
+        // console.log(parseInt(allSelected[0].score) * 2 ) // WORKS
+        // pass in hardcoded values for wildcards (greater than 8; but don't display them)
+        console.log(allSelected[0].score === '' ? 'wildcard': allSelected[0].score) // for when a wildcard is selected (no number)
+        // console.log(allSelected)
+    }
 
     const cardSelected = (event) => {
-/* handleClick = event => event.target.classList.add('click-state');
+        
 
-render() {
-    return <div className="base-state" onClick={this.handleClick}>Click here</div>;
-  }
-*/
+        let score = event.target.innerText
+        // console.log(`The score is: ${score}`)
+
+        // let allSelected = [];
+        let imageName = event.target.innerHTML
         const eventCheck = event.target.classList
+        // console.log(event)
+        // console.log(imageName)
 
-        eventCheck.contains('cardSelected') ? 
-        eventCheck.remove('cardSelected') : eventCheck.add('cardSelected')
+
+        // setNumCardsSelected(numCardsSelected += 1) 
+        // console.log(numCardsSelected)
+
+        // what is event.target? the card itself?
+        
+        // let flag = allSelected.length === 3 ? false : true;
+
+
+        //remove if selection is clicked again
+        function putBackCard (index) {
+            
+            // get object index
+            // let i = allSelected.indexOf(imageName)
+			allSelected.splice(index,1);
+            // console.log(`index is ${i}`)
+        }
+
+        //will search allSelected
+        function searchAllSelected() {
+             let obj = allSelected.find(x => x.img  === imageName)
+            //  console.log(`obj is ${obj}`)
+             let i = allSelected.indexOf(obj)
+
+             return i
+           
+            // for (let {investor, value, investment} of originalData) {
+            //     newData.find(x => x.investor === investor)[investment] += value;
+            //   }
+            
+        }
+
+        //if allSelected.length < 1 ... add 
+        
+        //move line up: option + up arrow
+        let result = searchAllSelected()
+        if (allSelected.length < 3) {
+            
+            //search the object return t / f if imageName is present
+           
+        //    result = searchAllSelected()
+        //    console.log(`searchAllSelected is ${searchAllSelected()}`)
+
+            // allSelected.includes(imageName) ? 
+            
+            if (result > -1) putBackCard(result);
+
+           if (result === -1) setAllSelected(allSelected.concat({img: imageName, score: score}))
+            
+            console.log(allSelected)
+
+            eventCheck.contains('cardSelected') ? 
+            eventCheck.remove('cardSelected') : eventCheck.add('cardSelected')
+            
+        }
+
+        //search object for imangeName ... return true or false
+
+        // if (allSelected.includes(imageName) && allSelected.length === 3) {
+        if (result > 0 && allSelected.length === 3) {
+            eventCheck.remove('cardSelected')
+            putBackCard(result)
+            
+        }
+
+
+
+
+		// //remove el
+		function remove(el) {
+			let i = allSelected.indexOf(el)
+			allSelected.splice(i,1);
+		}
+
+        
+		function selected(el) {
+
+            //check if three are selected already
+			let flag = allSelected.length === 3 ? false : true;
+			
+            // all 3 selected -- only option is to remove one -- nothing new added
+			 if (allSelected.includes(el) && allSelected.length === 3) {
+				el.classList.toggle("selected");
+				remove(el);
+				flag = false;
+			}
+
+            //if less than 3 and want to remove card (change your mind before 3; 0 1 or 2 cards selected)  
+			if (allSelected.length < 3 && flag) {
+				el.classList.toggle("selected")
+				allSelected.includes(el) ? remove(el) : allSelected.push(el);
+			}			
+		}
+
 
         
         // console.log(event.target) --> shows the image path and alt
@@ -101,7 +206,7 @@ render() {
                 </table>
                 <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
                 {/* only display if user has submitted three cards */}
-                <button className="ui basic button playCards" >Play Cards</button>   
+                <button className="ui basic button playCards" onClick= {playCards}>Play Cards</button>   
                 <div className="playerHand">
                     {playerHand}
                 </div>         
