@@ -5,7 +5,7 @@ const imageCategories = [
     },
     {
         style: 'lingerie',
-        paths: ['bp.jpg', 'i.jpg', 'bp3.jpg', '22-lrg.jpg']
+        paths: ['bp.jpg', 'i.jpg', 'bp3.jpg', '22-lrg.jpg', '77fedc586cfe311804e35228bfefe383.jpg']
     },
     {
         style: 'spank',
@@ -13,7 +13,7 @@ const imageCategories = [
     },
     {
         style: 'glamour',
-        paths: ['mona.jpg', 'tamara.jpg']
+        paths: ['mona.jpg', 'tamara.jpg', '71038e8e6832ded8beba88c8d4633b24.jpg', 'fccd48ff97489b91f576b4f26dd78cb3.jpg']
     },
     {
         style: 'wildcard',
