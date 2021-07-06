@@ -4,7 +4,12 @@
 }
 
 
-
+.cardSelected {
+    box-shadow: 3px 3px 3px black;
+    position: relative;
+    top: -45px;
+    
+}
 
 .shuffleButton {
     /* add styles for mobile screen */
@@ -23,15 +28,15 @@
     color:white;
     height: 50px;
     width: 50px;
-    border-radius: 50%;
-    position: absolute;
+    border-bottom-right-radius: 50%;
+    position: inherit;
     z-index: 10;
     text-align: center;
-    top:-35px;
+    box-shadow: 3px 3px 4px gray;
     
     /* when content overflows, the circle doesn't work
      need overflow:hidden to display the circle */
-    overflow:hidden;
+    /* overflow:hidden; */
 
 }
 
@@ -39,6 +44,7 @@
 
 .cards {
     border: 3px solid black; 
+    border-radius: 10%;
     overflow: hidden;
     min-width: 75px;
     /* width: 200px;
@@ -95,23 +101,52 @@
 /* TODP: add sass; add variable to reuse between each of these eleemnts */
 .cartoon {
     background-color:darkturquoise;
+
+    color:white;
+    height: 50px;
+    width: 50px;
+    border-bottom-right-radius: 50%;
+    position: inherit;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 3px 3px 4px gray;
     
 }
 
 .bikini {
   
     background-color: chartreuse;
+
+    color:white;
+    height: 50px;
+    width: 50px;
+    border-bottom-right-radius: 50%;
+    position: inherit;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 3px 3px 4px gray;
     
     
 }
 
 .lingerie {
-    /* height: 25px;
-    width: 25px;
+     /* height: 100px;
+    width: 300px; */
+/*
     border-radius: 50%;
     position: absolute;
     z-index: 10; */
     background-color:crimson;
+   
+    color:white;
+    height: 50px;
+    width: 50px;
+    border-bottom-right-radius: 50%;
+    position: inherit;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 3px 3px 4px gray;
+    
 }
 
 .spank{
@@ -121,6 +156,15 @@
     position: absolute;
     z-index: 10; */
     background-color: chocolate;
+
+    color:white;
+    height: 50px;
+    width: 50px;
+    border-bottom-right-radius: 50%;
+    position: inherit;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 3px 3px 4px gray;
 }
 
  .glamour{
@@ -130,6 +174,15 @@
     position: absolute;
     z-index: 10; */
     background-color: burlywood;
+
+    color:white;
+    height: 50px;
+    width: 50px;
+    border-bottom-right-radius: 50%;
+    position: inherit;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 3px 3px 4px gray;
 }
 
 .wildcard {
@@ -139,4 +192,6 @@
     position: absolute;
     z-index: 10; */
     background-color:blueviolet;
+
+    
 }

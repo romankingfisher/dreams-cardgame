@@ -1,6 +1,5 @@
 import React from 'react'
 
-import ImageList from './components/ImageList'
 import CardTable from './components/CardTable'
 
 
