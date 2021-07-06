@@ -5,10 +5,20 @@
 
 
 .cardSelected {
-    box-shadow: 3px 3px 3px black;
+    box-shadow: -3px -3px 8px goldenrod;
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
     position: relative;
     top: -45px;
     
+}
+
+.cardSelected img:hover {
+    overflow:hidden;
+    transform: scale(1.8);
+    -moz-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
 }
 
 .shuffleButton {
@@ -29,7 +39,7 @@
     height: 50px;
     width: 50px;
     border-bottom-right-radius: 50%;
-    position: inherit;
+    position: relative;
     z-index: 10;
     text-align: center;
     box-shadow: 3px 3px 4px gray;
@@ -42,7 +52,7 @@
 
 
 
-.cards {
+.card {
     border: 3px solid black; 
     border-radius: 10%;
     overflow: hidden;
@@ -53,13 +63,17 @@
     
 }
 
-.cards img {
+.card img {
     width:100%;
     
     transform: scale(1.25);
     
 }
 
+.card:hover {
+    box-shadow: -3px -3px 6px yellow;
+    cursor:pointer;
+}
 
 @media screen and (min-width:790px) {
 
@@ -87,7 +101,9 @@
     height: 400px;
 }
 
-.cards img {
+
+
+.card img {
     width:95%;
     height:auto;
 }
@@ -191,7 +207,16 @@
     border-radius: 50%;
     position: absolute;
     z-index: 10; */
-    background-color:blueviolet;
+    color: rebeccapurple;
+    font-weight: bolder;
+    height: 50px;
+    width: 50px;
+    border-bottom-right-radius: 50%;
+    position: inherit;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 3px 3px 4px gray;
+    background-color:yellow;
 
     
 }

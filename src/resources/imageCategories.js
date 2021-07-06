@@ -9,7 +9,7 @@ const imageCategories = [
     },
     {
         style: 'spank',
-        paths: ['ah.jpg', 'k.jpg', 'jessica-ashley-in-oasis9.jpg', 'Jessica-Ashley-nude-for-Playboy-03-533x800.jpg', '8kxkHnRT.jpg']
+        paths: ['ah.jpg', 'k.jpg', 'jessica-ashley-in-oasis9.jpg', 'Ja533x800.jpg', '8kxkHnRT.jpg']
     },
     {
         style: 'glamour',
