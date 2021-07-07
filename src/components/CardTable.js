@@ -3,7 +3,7 @@ import imageCategories from '../resources/imageCategories'
 
 import './styles/CardTable.css'
 
-const CardTable = () => {
+const CardTable = ({cardsSelected}) => {
 
     // get five random numbers to determine the categories
     // get five random scores from 1 to 9
@@ -13,14 +13,16 @@ const CardTable = () => {
     const [randomNums, setRandomNums] = useState([])
     let [allSelected, setAllSelected] = useState([])
 
-    const playCards = (event) => {
-        // console.log(parseInt(allSelected[0].score) * 2 ) // WORKS
-        // pass in hardcoded values for wildcards (greater than 8; but don't display them)
-        // console.log(allSelected[0].score === '' ? 'wildcard': allSelected[0].score) // for when a wildcard is selected (no number)
-        allSelected.forEach( (card) =>  {
-            console.log(card.score);})
-        
-    }
+    // const playCards = (event) => {
+    //     // console.log(parseInt(allSelected[0].score) * 2 ) // WORKS
+    //     // pass in hardcoded values for wildcards (greater than 8; but don't display them)
+    //     // console.log(allSelected[0].score === '' ? 'wildcard': allSelected[0].score) // for when a wildcard is selected (no number)
+    //     console.log(allSelected);
+    //     allSelected.forEach( (card) =>  {
+    //         // console.log(card.score);
+    //         console.log(card.key);
+    //     })    
+    // }
 
     const cardSelected = (event) => {
         // REVIEW: important for accessing the parent -- currentTarget
@@ -57,6 +59,7 @@ const CardTable = () => {
            } 
 
            if (result === -1) {
+            //    console.log(key);
                 setAllSelected(allSelected.concat({key: key, score: score}))
                 eventCheck.contains('cardSelected') ? 
                 eventCheck.remove('cardSelected') : eventCheck.add('cardSelected')
@@ -142,7 +145,10 @@ const CardTable = () => {
                 </table>
                 <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
                 {/* only display if user has submitted three cards */}
-                <button className="ui basic button playCards" onClick= {playCards}>Play Cards</button>   
+                {/* <button className="ui basic button playCards" onClick= {playCards}  >Play Cards</button>    */}
+                <button className="ui basic button playCards" onClick ={()=> {
+                    cardsSelected(allSelected);
+                }}>Play Cards</button>   
                 <div className="playerHand">
                     {playerHand}
                 </div>         
