@@ -2,7 +2,7 @@ import React from 'react'
 
 import CardTable from './components/CardTable'
 
-
+import './components/styles/App.css'
 
 
 
@@ -27,7 +27,8 @@ class App extends React.Component {
             {img: 'hd', path: 'hd.jpg', desc: ['h', 'blonde', 'bikini', 'smokin', 'ass'] }
         ],
         searchTerm: 'smokin',
-        mostRecent: []
+        mostRecent: [],
+        cardsPicked: []
     }
 
     editSearchTerm = e => {    
@@ -54,17 +55,37 @@ class App extends React.Component {
     // practice passing information around between components
     // parent to siblings and back
 
+    
+    displayCardsSelected = (allCardsSelected) =>{
+        // console.log(allCardsSelected);
+       
+        //use return!!!
+       let temp = allCardsSelected.map((card) => {
+           return (
+               <div key={card.key}>          
+                    <h1>{card.score}</h1>
+               </div>        
+           )
+            // review when I do and don't want to use this:
+            // // review [...array]
+        })
+
+
+        this.setState({cardsPicked: temp})
+    }
+
+
     render() {
         return (
             <div>
                 <h2>Board Game</h2>
                 
-                <CardTable className="cardtable"/>
+                <CardTable className="cardtable" cardsSelected={this.displayCardsSelected} />
                 {/* <input type= 'text' value= {this.state.searchTerm} onChange = {this.editSearchTerm} placeholder = 'Search for an image'/>
                 
                 <ImageList images = {this.dynamicSearch()}  searchTerm = {this.state.searchTerm} /> */}
-
-
+                
+                <div className="displayKeys">{this.state.cardsPicked} </div>
                 
             </div>
         )
