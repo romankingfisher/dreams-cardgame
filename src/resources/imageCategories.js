@@ -1,7 +1,7 @@
 const imageCategories = [
     {
         style: 'bikini',
-        paths: ['ss.jpg', 'hd.jpg', 'bp2.jpg']        
+        paths: ['ss.jpg', 'hd.jpg', 'bp2.jpg', '0860ceac2dbe2ef205b883a0249e756f.jpg']        
     },
     {
         style: 'lingerie',
