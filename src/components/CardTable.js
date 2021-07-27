@@ -136,7 +136,6 @@ const CardTable = ({cardsSelected}) => {
     
         return (
             <div className="cardtable">
-                <h1>Dreams</h1>
                 <table>
                 <caption>
                     run: <em>Earn 1.5x Ex:</em> 4,5,6<br/>

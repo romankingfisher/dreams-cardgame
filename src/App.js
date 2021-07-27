@@ -78,7 +78,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h2>Board Game</h2>
+                <h1>Dreams</h1>
                 
                 <CardTable className="cardtable" cardsSelected={this.displayCardsSelected} />
                 {/* <input type= 'text' value= {this.state.searchTerm} onChange = {this.editSearchTerm} placeholder = 'Search for an image'/>
