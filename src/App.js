@@ -3,6 +3,7 @@ import React from 'react'
 import CardTable from './components/CardTable'
 
 import './components/styles/App.css'
+import './components/styles/App.scss'
 
 
 
@@ -56,7 +57,7 @@ class App extends React.Component {
     // parent to siblings and back
 
     
-    displayCardsSelected = (allCardsSelected) =>{
+    displayCardsSelected = (allCardsSelected) => {
         // console.log(allCardsSelected);
        
         //use return!!!
