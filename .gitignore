@@ -26,3 +26,6 @@ src/App.test.js
 src/index.css
 src/logo.svg
 src/reportWebVitals.js
+public/images
+src/imgs
+public/demo_javascript.js
