@@ -3,7 +3,7 @@ import React from 'react'
 import CardTable from './components/CardTable'
 
 import './components/styles/App.css'
-import './components/styles/Sass_styles.scss'
+import './components/styles/App.scss'
 
 
 
