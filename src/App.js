@@ -2,8 +2,8 @@ import React from 'react'
 
 import CardTable from './components/CardTable'
 
-import './components/styles/App.css'
-import './components/styles/App.scss'
+import './styles/App.css'
+import './styles/App.scss'
 
 
 

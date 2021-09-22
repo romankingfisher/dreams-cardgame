@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import imageCategories from '../resources/imageCategories'
 
-import './styles/CardTable.css'
+import '../styles/CardTable.css'
 
 const CardTable = ({cardsSelected}) => {
 
