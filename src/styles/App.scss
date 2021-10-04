@@ -1,5 +1,46 @@
-$h1_font : rgb(207, 108, 16);
+// import the partial file
+// remember to include the underscore at the start "_"
+@import "_variables.scss";
 
-h1 {
+//mix-ins
+// for writing your own custom functions
+
+@mixin score-display($param, $width, $visibility) {
+    @media ($param:$width) {     
+        visibility: $visibility;
+        @content;
+    }
+}
+
+.showScores {
+    @include score-display(min-width,599px, hidden);
+
+}
+
+// what h1 inherits from
+// allows shared styles
+.page_styles {
     color: $h1_font;
+}
+
+h1  {
+    
+    //inheriting feature
+    @extend .page_styles;
+
+    // alternate way to write media queries with sass:
+    @media (min-width: 1260px) {
+        color: orangered;
+    }
+}
+
+
+p {
+    //include the mix-in:
+    
+    @include score-display(max-width,600px, hidden) {
+        // @content in the mix-in above will include any additional 
+        // code here ...
+      
+    }
 }

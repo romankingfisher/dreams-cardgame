@@ -136,12 +136,7 @@ const CardTable = ({cardsSelected}) => {
     
         return (
             <div className="cardtable">
-                <table>
-                <caption>
-                    run: <em>Earn 1.5x Ex:</em> 4,5,6<br/>
-                    three of a kind: <em>Earn double</em> Ex: 5,5,5
-                </caption>
-                </table>
+               
                 <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
                 {/* only display if user has submitted three cards */}
                 {/* <button className="ui basic button playCards" onClick= {playCards}  >Play Cards</button>    */}
