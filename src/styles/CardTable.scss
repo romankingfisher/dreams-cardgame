@@ -1,0 +1,23 @@
+
+button {
+    border:3px solid rgb(177, 177, 177);
+    border-radius: 50px 50px;
+}
+
+@mixin buttonPosition($position) {
+    top:27%;
+    $position:10px;
+    position: absolute;
+    width: auto;
+    padding: 3px;
+    height: 75px;
+}
+
+
+.shuffleButton {
+    @include buttonPosition(left);
+}
+
+.playCards {
+    @include buttonPosition(right);
+}

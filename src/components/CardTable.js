@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import imageCategories from '../resources/imageCategories'
 
 import '../styles/CardTable.css'
+import '../styles/CardTable.scss';
 
 const CardTable = ({cardsSelected}) => {
 
@@ -137,15 +138,17 @@ const CardTable = ({cardsSelected}) => {
         return (
             <div className="cardtable">
                
+                  
+                <div className="playerHand">
+                    {playerHand}
+                </div>  
+ 
                 <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
                 {/* only display if user has submitted three cards */}
                 {/* <button className="ui basic button playCards" onClick= {playCards}  >Play Cards</button>    */}
                 <button className="ui basic button playCards" onClick ={()=> {
                     cardsSelected(allSelected);
-                }}>Play Cards</button>   
-                <div className="playerHand">
-                    {playerHand}
-                </div>         
+                }}>Play Cards</button>        
                 
             </div>
         )
