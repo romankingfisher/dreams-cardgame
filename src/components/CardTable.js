@@ -122,12 +122,11 @@ const CardTable = ({cardsSelected}) => {
     let playerHand = randomNums.map((n) => {
         return (
             <div className="card" key={n.key}  onClick={cardSelected}>
-                {/* className= {selectedCard ? 'cardSelected' : null }  */}
+                {/* className= {selectedCard ? 'cardSelected' : null }  */}     
             <div    >
                 <div className="score">   
                     <h1 className= {  n.style === "wildcard" ? "wildcard" : n.style}> {n.style === "wildcard" ? "W" : n.score}</h1>
-                </div>
-                
+                </div>          
                 <img src= {'images/' + n.style + "/" + n.path}  alt= {n.path+ "_" + n.key} />
             </div>
             </div>
