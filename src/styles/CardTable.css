@@ -30,7 +30,7 @@
     /* repeat the 5 cols */
     grid-template-columns: repeat(5,1fr);
     position: absolute;
-    top: 55%;
+    top: 45%;
     grid-gap:10px;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .card img {
-    width:100%;
+    width:120%;
     /* height:auto; */
     transform: scale(1.5);
     
@@ -75,6 +75,7 @@
     cursor:pointer;
 }
 
+/* for BIGGER screens! */
 @media screen and (min-width:790px) {
 
 
@@ -85,15 +86,16 @@
     color:blue;
 }
 
-.shuffleButton, .playCards {
+/* verify this is needed -- doesn't appear to do anything */
+/* .shuffleButton, .playCards {
     width: 20%;
     position:relative;
     left:50px;
-}
+} */
 
 .playerHand {
     position: absolute;
-    top: 40%;
+    top: 20%;
 }
 
 .card {

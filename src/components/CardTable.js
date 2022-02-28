@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import imageCategories from '../resources/imageCategories'
 
-import './styles/CardTable.css'
+import '../styles/CardTable.css'
+import '../styles/CardTable.scss';
 
 const CardTable = ({cardsSelected}) => {
 
@@ -121,12 +122,11 @@ const CardTable = ({cardsSelected}) => {
     let playerHand = randomNums.map((n) => {
         return (
             <div className="card" key={n.key}  onClick={cardSelected}>
-                {/* className= {selectedCard ? 'cardSelected' : null }  */}
+                {/* className= {selectedCard ? 'cardSelected' : null }  */}     
             <div    >
                 <div className="score">   
                     <h1 className= {  n.style === "wildcard" ? "wildcard" : n.style}> {n.style === "wildcard" ? "W" : n.score}</h1>
-                </div>
-                
+                </div>          
                 <img src= {'images/' + n.style + "/" + n.path}  alt= {n.path+ "_" + n.key} />
             </div>
             </div>
@@ -136,21 +136,18 @@ const CardTable = ({cardsSelected}) => {
     
         return (
             <div className="cardtable">
-                <table>
-                <caption>
-                    run: <em>Earn 1.5x Ex:</em> 4,5,6<br/>
-                    three of a kind: <em>Earn double</em> Ex: 5,5,5
-                </caption>
-                </table>
+               
+                  
+                <div className="playerHand">
+                    {playerHand}
+                </div>  
+ 
                 <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
                 {/* only display if user has submitted three cards */}
                 {/* <button className="ui basic button playCards" onClick= {playCards}  >Play Cards</button>    */}
                 <button className="ui basic button playCards" onClick ={()=> {
                     cardsSelected(allSelected);
-                }}>Play Cards</button>   
-                <div className="playerHand">
-                    {playerHand}
-                </div>         
+                }}>Play Cards</button>        
                 
             </div>
         )
