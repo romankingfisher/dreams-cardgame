@@ -84,7 +84,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Dreams</h1>
+                <h1>4,5,6</h1>
 
                 <button className="showScores" onClick={this.showScoreHelp}>?</button>
                 <p id="gameScores">Scoring:</p>
