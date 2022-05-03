@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dreams-cardgame/static/css/main.cf50fd33.chunk.css",
-    "main.js": "/dreams-cardgame/static/js/main.a58b2804.chunk.js",
-    "main.js.map": "/dreams-cardgame/static/js/main.a58b2804.chunk.js.map",
+    "main.js": "/dreams-cardgame/static/js/main.3a375020.chunk.js",
+    "main.js.map": "/dreams-cardgame/static/js/main.3a375020.chunk.js.map",
     "runtime-main.js": "/dreams-cardgame/static/js/runtime-main.ee642849.js",
     "runtime-main.js.map": "/dreams-cardgame/static/js/runtime-main.ee642849.js.map",
     "static/js/2.ff6b8107.chunk.js": "/dreams-cardgame/static/js/2.ff6b8107.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.ee642849.js",
     "static/js/2.ff6b8107.chunk.js",
     "static/css/main.cf50fd33.chunk.css",
-    "static/js/main.a58b2804.chunk.js"
+    "static/js/main.3a375020.chunk.js"
   ]
 }
