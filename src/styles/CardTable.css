@@ -110,7 +110,7 @@
 
     .playerHand {
         /* display:flexbox; */
-        margin: -180px auto;
+        margin: -160px 15px;
     }
 
       .card img {
