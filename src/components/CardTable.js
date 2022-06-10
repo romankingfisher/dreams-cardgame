@@ -141,15 +141,17 @@ const CardTable = ({cardsSelected}) => {
                   
                 <div className="playerHand">
                     {playerHand}
+                    <div className="buttonGroup">
+                    <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
+                    {/* only display if user has submitted three cards */}
+                    {/* <button className="ui basic button playCards" onClick= {playCards}  >Play Cards</button>    */}
+                    
+                    <button className="ui basic button playCards" onClick ={()=> {
+                        cardsSelected(allSelected);
+                    }}>Play Cards</button>        
+                    </div>
                 </div>  
- 
-                <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
-                {/* only display if user has submitted three cards */}
-                {/* <button className="ui basic button playCards" onClick= {playCards}  >Play Cards</button>    */}
-                <button className="ui basic button playCards" onClick ={()=> {
-                    cardsSelected(allSelected);
-                }}>Play Cards</button>        
-                
+              
             </div>
         )
     
