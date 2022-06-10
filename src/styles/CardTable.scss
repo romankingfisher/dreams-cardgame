@@ -4,31 +4,46 @@ button {
     border-radius: 50px 50px;
 }
 
-@mixin buttonPosition($position) {
-    top:27%;
-    $position:10px;
-    width: auto;
+@mixin buttonPosition() {
+    // top:27%;
+    
+    width: 35%;
     padding: 3px;
     height: 75px;
 }
 
+// @mixin buttonPosition($position) {
+//     top:27%;
+//     $position:10px;
+//     width: auto;
+//     padding: 3px;
+//     height: 75px;
+// }
 
-.shuffleButton {
-    @include buttonPosition(left);
+// .playCards {
+//     // @include buttonPosition(right);
+// }
+
+
+.shuffleButton, 
+.playCards {
+    @include buttonPosition();
+    
 }
 
-.playCards {
-    @include buttonPosition(right);
+.ui.basic.button {
+    // background-color: aqua !important;
+    border-radius: 13px !important;
 }
 
 .buttonGroup {
     display:flex;
-    
+    justify-content: center;
     height: 150px;
-    width: 600px;
-    border:1px solid red;
-    top:70%;
+    width: 100%;
+    max-width:1500px;
+    top:75%;
     position: absolute;
-
+    
 }
 

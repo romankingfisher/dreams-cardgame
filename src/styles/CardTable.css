@@ -4,14 +4,19 @@
 }
 
 
+
 .cardSelected {
-    box-shadow: -3px -3px 8px goldenrod;
-    transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
+    box-shadow: -3px -3px 8px rgba(104, 3, 3, 0.712);
+    
     position: relative;
     top: -45px;
     
+}
+
+.cardSelected img {
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 .cardSelected img:hover {
@@ -51,7 +56,7 @@
 
 
 .card {
-    border: 3px solid black; 
+    border: 1px solid gray; 
     border-radius: 10%;
     overflow: hidden;
     min-width: 75px;
@@ -72,6 +77,105 @@
     box-shadow: -3px -3px 12px rgb(80, 72, 63);
     cursor:pointer;
 }
+
+/* phones */
+
+@media screen and (max-width:420px) {
+   body {
+    background-color: rgb(226, 228, 226);     
+    } 
+   
+    h1, button.showScores {
+
+        display: none; 
+        /* visibility: hidden; el takes up the same space */
+    }
+
+ 
+
+    h1.glamour, h1.bikini, 
+    h1.cartoon, h1.lingerie,
+    h1.wildcard, h1.spank
+     {
+     display: block;   
+    }
+    
+
+    
+
+    .card {
+        height: 175px;
+        width:175px;
+    }
+
+    .playerHand {
+        /* display:flexbox; */
+        margin: -180px auto;
+    }
+
+      .card img {
+        width:100%;
+        /* transform: scale(1.65); 
+        /* padding:25px; */
+    }
+
+    .cardSelected {
+        top:0px;
+        border: 1px solid gray;
+        z-index: 100;
+        position: relative;
+    }
+
+ 
+
+    .playerHand .card:nth-child(1).cardSelected {
+        /* margin-left: 15px; */
+        top: 15px;
+        left:15px;
+    }
+
+    .playerHand .card:nth-child(2).cardSelected {
+        /* margin-left: 15px; */
+       
+        top: 15px;
+        right:15px;
+    }
+
+    .playerHand .card:nth-child(4).cardSelected {
+        /* margin-left: 15px; */
+       
+        top: -15px;
+        left:15px;
+    }
+
+    .playerHand .card:nth-child(5).cardSelected {
+        /* margin-left: 15px; */
+       
+        top: -15px;
+        right:15px;
+    }
+
+    /* general positions for cards on small screens */
+    .playerHand .card:nth-child(1) {
+        margin-left: 5px;
+    }
+
+    .playerHand .card:nth-child(3) {
+        margin: 190px -285px;
+    }
+
+    .playerHand .card:nth-child(4)
+     {    
+        margin: 375px -380px;
+    }
+
+    .playerHand .card:nth-child(5)
+     {    
+        margin: 375px -205px;
+    }
+
+}
+
 
 /* for BIGGER screens! */
 @media screen and (min-width:790px) {
