@@ -128,7 +128,7 @@ const CardTable = ({cardsSelected}) => {
                     <h1 className= {  n.style === "wildcard" ? "wildcard" : n.style}> {n.style === "wildcard" ? "W" : n.score}</h1>
                 </div>
                 
-                <img src= {'images/' + n.style + "/" + n.path}  alt= {n.path+ "_" + n.key} />
+                <img src= {require('../../public/images/' + n.style + "/" + n.path)}  alt= {n.path+ "_" + n.key} />
             </div>
             </div>
         )
@@ -141,7 +141,9 @@ const CardTable = ({cardsSelected}) => {
                   
                 <div className="playerHand">
                     {playerHand}
-                    <div className="buttonGroup">
+                 
+                </div>  
+                <div className="buttonGroup">
                     <button className="ui basic button shuffleButton" onClick={shuffleCards}>Shuffle Cards</button> 
                     {/* only display if user has submitted three cards */}
                     {/* <button className="ui basic button playCards" onClick= {playCards}  >Play Cards</button>    */}
@@ -150,8 +152,6 @@ const CardTable = ({cardsSelected}) => {
                         cardsSelected(allSelected);
                     }}>Play Cards</button>        
                     </div>
-                </div>  
-              
             </div>
         )
     

@@ -7,7 +7,6 @@ button {
 @mixin buttonPosition($position) {
     top:27%;
     $position:10px;
-    position: absolute;
     width: auto;
     padding: 3px;
     height: 75px;
@@ -24,16 +23,12 @@ button {
 
 .buttonGroup {
     display:flex;
-    height: 50px;
-    width: 300px;
+    
+    height: 150px;
+    width: 600px;
     border:1px solid red;
-}
-
-.shuffleButton {
-    background-color: orangered;
-    margin:auto;
-}
-
-.displayCards {
+    top:70%;
+    position: absolute;
 
 }
+

@@ -28,7 +28,7 @@
     /* repeat the 5 cols */
     grid-template-columns: repeat(5,1fr);
     position: absolute;
-    top: 45%;
+    top: 25%;
     grid-gap:10px;
 }
 
