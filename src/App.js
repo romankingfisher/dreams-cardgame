@@ -2,7 +2,8 @@ import React from 'react'
 
 import CardTable from './components/CardTable'
 
-import './components/styles/App.css'
+import './styles/App.css'
+import './styles/App.scss'
 
 
 
@@ -56,7 +57,7 @@ class App extends React.Component {
     // parent to siblings and back
 
     
-    displayCardsSelected = (allCardsSelected) =>{
+    displayCardsSelected = (allCardsSelected) => {
         // console.log(allCardsSelected);
        
         //use return!!!
@@ -74,18 +75,32 @@ class App extends React.Component {
         this.setState({cardsPicked: temp})
     }
 
+    showScoreHelp() {
+        let x = document.getElementById("gameScores");
+        x.style.visibility === "visible" ? x.style.visibility = "" 
+                              : x.style.visibility = "visible";
+    }
 
     render() {
         return (
             <div>
-                <h1>Dreams</h1>
+                <h1>4,5,6</h1>
+
+                <button className="showScores" onClick={this.showScoreHelp}>?</button>
+                <p id="gameScores">Scoring:</p>
+                {/* <table>
+                <caption>
+                    run: <em>Earn 1.5x Ex:</em> 4,5,6<br/>
+                    three of a kind: <em>Earn double</em> Ex: 5,5,5
+                </caption>
+                </table> */}
                 
                 <CardTable className="cardtable" cardsSelected={this.displayCardsSelected} />
                 {/* <input type= 'text' value= {this.state.searchTerm} onChange = {this.editSearchTerm} placeholder = 'Search for an image'/>
                 
                 <ImageList images = {this.dynamicSearch()}  searchTerm = {this.state.searchTerm} /> */}
                 
-                <div className="displayKeys">{this.state.cardsPicked} </div>
+                <div className="displayKeys"> {this.state.cardsPicked} </div>
                 
             </div>
         )
